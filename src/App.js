@@ -1,14 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import bootstrap
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Navbar from "./components/pages/layouts/Navbar";
+// install =>yarn add react-router-dom
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+//import page not found page
+import Page404 from "./PageNotFound/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2> hello this is crud operaion of reactjs</h2>
-       
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
+          <Route exact path="*" element={<Page404 />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
