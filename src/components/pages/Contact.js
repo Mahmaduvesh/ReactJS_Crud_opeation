@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="container">
       <div className="py-4">
         <h1>Contact Page</h1>
-        <form class="row g-3">
+        <form class="row g-3 shadow">
           <div class="col-md-6">
             <label for="inputEmail4" class="form-label">
               Email

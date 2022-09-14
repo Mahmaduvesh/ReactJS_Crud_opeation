@@ -1,0 +1,23 @@
+install => yarn add json-server
+
+jsonplaceholder(Free fake API for testing)
+
+ // add json server and port number in pacakage.json folder
+ ["json-server":"json-server --watch db.json --port 3003"]
+
+ view fact users using new port number => localhost:3003/users => yarn run json-server 
+
+
+install yarn concurrently to run both server yarn and json-server
+ yarn add concurrently
+
+pacakage.json => add the new start:dev 
+"start:dev": "concurrently \"command1 arg\" \"command2 arg\""
+
+"start:dev": "concurrently \"yarn start\" \" yarn run json-server\""
+
+to run both using command => yarn run start:dev
+
+axios
+install axios for send get and post Request
+
