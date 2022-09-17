@@ -122,6 +122,14 @@
       "phone": "9898201752",
       "website": "thyyyu",
       "id": 6
+    },
+    {
+      "name": "Computer Science",
+      "username": "student",
+      "email": "admin@admin.com",
+      "phone": "9898201752",
+      "website": "thyyyu",
+      "id": 7
     }
   ]
 }

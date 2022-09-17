@@ -11,6 +11,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 //import page not found page
 import Page404 from "./PageNotFound/PageNotFound";
 import AddUser from "./components/users/AddUser";
+import EditUser from "./components/users/EditUser";
+import ViewUser from "./components/users/ViewUser";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/adduser" element={<AddUser />}></Route>
+          <Route exact path="/edituser" element={<EditUser />}></Route>
+          <Route exact path="/viewuser" element={<ViewUser />}></Route>
           <Route exact path="*" element={<Page404 />}></Route>
         </Routes>
       </div>

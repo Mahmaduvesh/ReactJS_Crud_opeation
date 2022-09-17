@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
@@ -18,7 +19,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="py-4">
-        <h1>Home Page</h1>
+        <h1 className="p-2">Home Page</h1>
 
         <table className="table table-bordered shadow">
           <thead className="table-dark">
@@ -31,12 +32,6 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
-            {/* <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr> */}
             {users.map((user, index) => (
               <tr>
                 <th scope="row">{index + 1}</th>
@@ -44,23 +39,22 @@ const Home = () => {
                 <td>{user.username}</td>
                 <td>{user.email}</td>
                 <td>
-                  <button
-                    type="button"
-                    class="btn btn-primary"
+                  <Link
+                    className="btn btn-primary "
                     style={{ marginRight: "10px" }}
+                    to="/ViewUser"
                   >
                     View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-success "
+                  </Link>
+                  <Link
+                    className="btn btn-outline-success "
                     style={{ marginRight: "10px" }}
+                    to="/EditUser"
                   >
                     Edit
-                  </button>
+                  </Link>
                   <button
-                    type="button"
-                    class="btn btn-danger "
+                    className="btn btn-danger "
                     style={{ marginRight: "10px" }}
                   >
                     Delete
