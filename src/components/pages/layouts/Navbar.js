@@ -38,6 +38,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          style={{ marginRight: "12%" }}
+        >
+          + Add Users
+        </button>
       </div>
     </nav>
   );
