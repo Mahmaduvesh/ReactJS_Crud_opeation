@@ -38,13 +38,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <button
+        <Link
           type="button"
           class="btn btn-outline-light"
+          to="/AddUser"
           style={{ marginRight: "12%" }}
         >
           + Add Users
-        </button>
+        </Link>
       </div>
     </nav>
   );
