@@ -11,6 +11,12 @@ const Home = () => {
   }, []);
 
   //
+  const deleteUser = async (id) => {
+    await axios.delete(`http://localhost:3003/users/${id}`);
+    loadusers();
+  };
+
+  //
   const loadusers = async () => {
     const result = await axios.get("http://localhost:3003/users");
     // console.log(result);
@@ -42,7 +48,7 @@ const Home = () => {
                   <Link
                     className="btn btn-primary "
                     style={{ marginRight: "10px" }}
-                    to="/ViewUser"
+                    to={`/ViewUser/${user.id}`}
                   >
                     View
                   </Link>
@@ -56,6 +62,7 @@ const Home = () => {
                   <button
                     className="btn btn-danger "
                     style={{ marginRight: "10px" }}
+                    onClick={() => deleteUser(user.id)}
                   >
                     Delete
                   </button>
