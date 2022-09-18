@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/adduser" element={<AddUser />}></Route>
-          <Route exact path="/edituser" element={<EditUser />}></Route>
+          <Route exact path="/edituser/:id" element={<EditUser />}></Route>
           <Route exact path="/viewuser" element={<ViewUser />}></Route>
           <Route exact path="*" element={<Page404 />}></Route>
         </Routes>

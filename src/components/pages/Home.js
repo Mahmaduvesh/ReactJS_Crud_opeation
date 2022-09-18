@@ -49,7 +49,7 @@ const Home = () => {
                   <Link
                     className="btn btn-outline-success "
                     style={{ marginRight: "10px" }}
-                    to="/EditUser"
+                    to={`/EditUser/${user.id}`}
                   >
                     Edit
                   </Link>

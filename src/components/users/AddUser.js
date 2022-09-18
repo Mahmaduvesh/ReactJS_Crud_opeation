@@ -29,7 +29,7 @@ const AddUser = () => {
   return (
     <div className="container">
       <div className="w-50 mx-auto shadow p-5 ">
-        <h2 className="text-center mb-3">Add Users</h2>
+        <h2 className="text-center mb-3">Add A Users</h2>
         <form onSubmit={(e) => onSubmit(e)}>
           <div className="form-group pb-3">
             <input
